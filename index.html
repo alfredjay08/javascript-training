@@ -16,19 +16,25 @@
     <footer id="footer">This is the footer</footer>
 
     <script>
-      const nav = document.getElementById("nav");
+      //   const nav = document.getElementById("nav");
 
       nav.style.padding = "20px";
 
-      const main = document.getElementById("main");
+      //   const main = document.getElementById("main");
 
       main.style.marginTop = "50px";
 
-      const footer = document.getElementById("footer");
+      //   const footer = document.getElementById("footer");
 
-      footer.style.background = "#181818";
+      footer.style.background = "blue";
 
-      nav.style.height = main.style.height = footer.style.height = "20px";
+      const btn = document.createElement("button");
+
+      btn.style.padding = "8px";
+      btn.style.marginTop = "100px";
+      btn.style.background = "#181818";
+      btn.className = "btn btn-primary";
+      btn.innerHTML = "Click <strong>Me!</strong>";
     </script>
   </body>
 </html>
