@@ -15,6 +15,12 @@
 
     <footer id="footer">This is the footer</footer>
 
+    <button onClick="count(5)">Count Me!</button>
+
+    <button onclick="alert(this.innerHTML)">Alert Me!</button>
+
+    <button id="btnElement">Trigger the Event!</button>
+
     <script>
       //   const nav = document.getElementById("nav");
 
@@ -35,9 +41,32 @@
       btn.style.background = "#181818";
       btn.style.color = "#fff";
       btn.className = "btn btn-primary";
+
       btn.innerHTML = "Click <strong>Me!</strong>";
 
       document.body.appendChild(btn);
+
+      const clear = (element) => {
+        element.innerHTML = "";
+      };
+
+      const count = (maxCount) => {
+        for (let i = 0; i < maxCount; i++) {
+          alert(`Count: ${i}`);
+        }
+      };
+
+      btnElement.onclick = () => {
+        alert("Btn onclicked!");
+      };
+
+      btnElement.addEventListener("click", () => {
+        alert("first use of addEventListener");
+      });
+
+      btnElement.addEventListener("click", () => {
+        alert("second use of addEventListener");
+      });
     </script>
   </body>
 </html>
